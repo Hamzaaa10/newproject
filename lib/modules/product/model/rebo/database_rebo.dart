@@ -20,7 +20,9 @@ CREATE TABLE product (
              quantity INTEGER,
              availableQuantity INTEGER,
              favorite INTEGER,
-             cart INTEGER
+             cart INTEGER,
+             favourite Boolean ,
+             cart Boolean
               )''');
       },
     );
