@@ -23,7 +23,7 @@ class dashboard_page extends StatelessWidget {
               controller: control.pagecontrol,
               onPageChanged: control.onchange,
               children: [
-                product_page()
+                ProductPage()
                 , Text("fav"), Text("cart")],
             ),
             bottomNavigationBar: BottomNavigationBar(

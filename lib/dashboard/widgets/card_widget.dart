@@ -10,60 +10,30 @@ class customcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      
-      children: [
-        
-        
-        
-        Container(
-          decoration: BoxDecoration(
-              
-              boxShadow: [
-                BoxShadow(
-                    blurRadius: 0.2,
-                    color: Colors.grey.withOpacity(0.1),
-                    offset:const Offset(1, 5)),
-              ]),
-          
-          child:  Card(
-            elevation: 6,
-            color: Colors.white,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    productModel.title??'no name',
-                    style:const TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                 const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(productModel.desc??"no desc",
-                          style:
-                             const TextStyle(color: Colors.black, fontSize: 20)),
-                     const Icon(
-                        CupertinoIcons.heart,
-                        color: Colors.red,
-                      )
-                    ],
-                  )
-                ]),
+    return ColoredBox(
+      color: Colors.green,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            productModel.name?? 'XXX',
+            style: const TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+            ),
           ),
-        ),
-        // لو عملت الصوره اللغي comment
-        
-      // Positioned(bottom:70 ,left: 40,
-      //    child: Image.network(product.image,width: 150,height: 80,))
-      ],
-        
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              productModel.desc?? 'XXX',
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.yellow,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
