@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910003893232",
+    "project_id": "khaled-a9d3a",
+    "storage_bucket": "khaled-a9d3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910003893232:android:a9e83d850537af85e82335",
+        "android_client_info": {
+          "package_name": "com.example.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtkI9x8g3Pny6hqANza9VMjIrPk6Fh23s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,10 @@
+<<<<<<< HEAD:lib/controler/onboardingcubit/onbordingcubit.dart
+ 
+
+import 'package:auth/controler/onboardingcubit/onbordingcontrolstate.dart';
+=======
 import 'package:auth/controler/cubits/onbordingcontrolstate.dart';
+>>>>>>> main:lib/controler/cubits/onbordingcubit.dart
 import 'package:auth/models/bordingmodel.dart';
 import 'package:auth/pages/onbordingpage.dart';
 import 'package:auth/pages/signin.dart';
