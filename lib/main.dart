@@ -1,4 +1,6 @@
 
+import 'dart:js_interop';
+import 'package:auth/core/my_theme.dart';
 import 'package:auth/dashboard/view/dashboard_page.dart';
 import 'package:auth/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,7 +33,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:dashboard_page()
+      theme: MyTheme.instance.light,
+      darkTheme:MyTheme.instance.dark ,
+      themeMode:ThemeMode.dark ,
+      home:dashboard_page() ,
+
       // onbording?Signin():onbordingpage(),
     );
   }

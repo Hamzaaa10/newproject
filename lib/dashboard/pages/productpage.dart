@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:auth/dashboard/widgets/card_widget.dart';
-
+import 'package:auth/dashboard/models/product_model.dart';
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
 
