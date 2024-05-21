@@ -1,7 +1,9 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:auth/controler/onboardingcubit/onbordingcubit.dart';
 import 'package:auth/core/my_theme.dart';
 import 'package:auth/dashboard/view/dashboard_page.dart';
 import 'package:auth/firebase_options.dart';
+import 'package:auth/pages/onbordingpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: MyTheme.instance.light,
         darkTheme: MyTheme.instance.dark,
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.light,
         home: AnimatedSplashScreen(
             duration: 3000,
             splash: Icon(
