@@ -37,8 +37,8 @@ void skip(BuildContext context)async{
 
   List data =[
     
-    onbordinmodel(txt: 'Welcome\n to', txt2: " ElSOOK", image: "https://www.cato.org/sites/cato.org/files/styles/aside_3x/public/2023-11/fast-fashion2.jpeg?itok=72ek8bxI"),
-    onbordinmodel(txt: 'SALE 30%\n on all products', txt2: " ", image: "https://www.searchenginejournal.com/wp-content/uploads/2022/08/google-shopping-ads-6304dccb7a49e-sej-1280x720.png"),
-    onbordinmodel(txt: "Highest\n quality\n and\n cheapest\n price", txt2: " ", image: "https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg")
+    onbordinmodel(text: 'Welcome\n to', club: " ElSOOK", image: "https://www.cato.org/sites/cato.org/files/styles/aside_3x/public/2023-11/fast-fashion2.jpeg?itok=72ek8bxI"),
+    onbordinmodel(text: 'SALE 30%\n on all products', club: " ", image: "https://www.searchenginejournal.com/wp-content/uploads/2022/08/google-shopping-ads-6304dccb7a49e-sej-1280x720.png"),
+    onbordinmodel(text: "Highest\n quality\n and\n cheapest\n price", club: " ", image: "https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg")
   ];
 }
