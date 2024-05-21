@@ -19,6 +19,7 @@ class ProductPage extends StatelessWidget {
           } else if (state is UserEmpty) {
             return const Center(
               child: Icon(
+              
                 CupertinoIcons.delete,
                 size: 100,
                 color: Colors.grey,

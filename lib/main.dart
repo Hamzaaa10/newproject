@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: MyTheme.instance.light,
       darkTheme:MyTheme.instance.dark ,
-      themeMode:ThemeMode.dark ,
+      themeMode:ThemeMode.light ,
       home:dashboard_page() ,
 
       // onbording?Signin():onbordingpage(),

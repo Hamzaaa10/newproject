@@ -10,7 +10,7 @@ class MyTheme {
         colorScheme: ColorScheme.light(background: Colors.orange),
       ),
       textTheme: const TextTheme(
-          displayLarge: TextStyle(fontSize: 20, color: Colors.limeAccent),
+          displayLarge: TextStyle(fontSize: 20, color: Color.fromARGB(255, 65, 255, 160)),
           bodyLarge: TextStyle(
               fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold),
           labelLarge: TextStyle(
@@ -21,7 +21,7 @@ class MyTheme {
         colorScheme: ColorScheme.dark(background: Colors.blue),
       ),
       textTheme: const TextTheme(
-          displayLarge: TextStyle(fontSize: 20, color: Colors.limeAccent),
+          displayLarge: TextStyle(fontSize: 20, color: Color.fromARGB(255, 67, 56, 222)),
           bodyLarge: TextStyle(
               fontSize: 18,
               color: Color.fromARGB(255, 255, 255, 255),
