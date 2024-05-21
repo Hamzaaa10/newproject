@@ -1,6 +1,7 @@
+import 'package:auth/dashboard/models/product_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../models/product_model.dart';
+
 
 class firebase_repo {
   static firebase_repo instance = firebase_repo();
