@@ -5,13 +5,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:auth/dashboard/widgets/card_widget.dart';
 import 'package:auth/dashboard/models/product_model.dart';
+
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ProductCubit()..apper(), // Ensure fetch is called on creation
+      create: (context) =>
+          ProductCubit()..apper(), // Ensure fetch is called on creation
       child: BlocBuilder<ProductCubit, ProductState>(
         builder: (context, state) {
           if (state is UserLoading) {
@@ -19,7 +21,6 @@ class ProductPage extends StatelessWidget {
           } else if (state is UserEmpty) {
             return const Center(
               child: Icon(
-              
                 CupertinoIcons.delete,
                 size: 100,
                 color: Colors.grey,
