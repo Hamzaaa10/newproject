@@ -4,9 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:auth/core/my_theme.dart';
+
 class dashboard_page extends StatelessWidget {
- const dashboard_page({super.key});
- final List title = const["products", 'fav', 'cart'];
+  const dashboard_page({super.key});
+  final List title = const ["products", 'fav', 'cart'];
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -17,21 +18,21 @@ class dashboard_page extends StatelessWidget {
 
           return Scaffold(
             appBar: AppBar(
-              title: Text(title[control.count] ,style: Theme.of(context).textTheme.displayLarge
-              ),
+              title: Text(title[control.count],
+                  style: Theme.of(context).textTheme.displayLarge),
             ),
-            
             body: PageView(
               controller: control.pagecontrol,
               onPageChanged: control.onchange,
               children: [
-                ProductPage() ,
-                Text("fav" ,
-                style:Theme.of(context).textTheme.bodyLarge,
-                ), Text("cart" ,
-                style:Theme.of(context).textTheme.bodyLarge
-                ) , 
-                ],
+                ProductPage(),
+                Text(
+                  "Fav",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+                Text("Cart", style: Theme.of(context).textTheme.bodyLarge),
+                Text("Producy", style: Theme.of(context).textTheme.bodyLarge),
+              ],
             ),
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: control.count,
@@ -40,7 +41,7 @@ class dashboard_page extends StatelessWidget {
               showUnselectedLabels: true,
               unselectedLabelStyle:
                   const TextStyle(fontSize: 15, color: Colors.red),
-              items:const [
+              items: const [
                 BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.collections), label: 'products'),
                 BottomNavigationBarItem(

@@ -7,44 +7,38 @@ import 'package:flutter/material.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
 
-
 class forgetpass extends StatefulWidget {
   forgetpass({super.key});
 
   @override
   State<forgetpass> createState() => _forgetpassState();
-  
 }
 
 class _forgetpassState extends State<forgetpass> {
   String? email;
-  TextEditingController? emailController=TextEditingController();
-  Future<void> sendinggmail()async{
+  TextEditingController? emailController = TextEditingController();
+  Future<void> sendinggmail() async {
     try {
-      var gmailmessage= Message();
-      gmailmessage.subject='subject from news app';
-      gmailmessage.text= 'hey ......send from news';
-      gmailmessage.from= Address(email.toString());
+      var gmailmessage = Message();
+      gmailmessage.subject = 'subject from news app';
+      gmailmessage.text = 'hey ......send from news';
+      gmailmessage.from = Address(email.toString());
       gmailmessage.recipients.add(email);
-      var smtpserver =gmailRelaySaslXoauth2(email!,'yucq dydx wdrm fzjg');
-     await send(gmailmessage, smtpserver);
+      var smtpserver = gmailRelaySaslXoauth2(email!, 'yucq dydx wdrm fzjg');
+      await send(gmailmessage, smtpserver);
       print("........... email send");
-
-      
     } catch (e) {
       massage(context, "sorry there's an error $e");
-      
     }
-
   }
-  Future cheackemail()async{
-    try {
-  await FirebaseAuth.instance
-                        .sendPasswordResetEmail(email: emailController!.text.trim());
-} on FirebaseAuthException catch (e) {
-  massage(context, 'not email');
-}
 
+  Future cheackemail() async {
+    try {
+      await FirebaseAuth.instance
+          .sendPasswordResetEmail(email: emailController!.text.trim());
+    } on FirebaseAuthException catch (e) {
+      massage(context, 'not email');
+    }
   }
 
   GlobalKey<FormState> formkey = GlobalKey();
@@ -100,12 +94,10 @@ class _forgetpassState extends State<forgetpass> {
                 onTap: () async {
                   if (formkey.currentState!.validate()) {
                     try {
-                      await FirebaseAuth.instance
-                          .sendPasswordResetEmail(email: emailController!.text.trim());
-                          sendinggmail();
-                      
-                      
-                      
+                      await FirebaseAuth.instance.sendPasswordResetEmail(
+                          email: emailController!.text.trim());
+                      sendinggmail();
+
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
                           return verifiaction();
@@ -113,13 +105,10 @@ class _forgetpassState extends State<forgetpass> {
                       ));
                     } on FirebaseAuthException catch (e) {
                       massage(context, 'emailnot exist');
-                      
-                    } 
+                    }
                   }
                 },
               ),
-              
-           
             ],
           ),
         ),
@@ -127,4 +116,3 @@ class _forgetpassState extends State<forgetpass> {
     );
   }
 }
-
