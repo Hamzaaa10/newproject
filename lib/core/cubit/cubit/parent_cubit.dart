@@ -1,13 +1,13 @@
 import 'dart:convert';
+
 import 'package:bloc/bloc.dart';
-import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
-import 'package:auth/core/cubit/parent_state.dart';
+import 'package:flutter/services.dart';
 part 'parent_state.dart';
 
 class ParentCubit extends Cubit<ParentState> {
-  static final ParentCubit instance = ParentCubit();
   ParentCubit() : super(ParentInitial());
+  static final ParentCubit instance = ParentCubit();
   Map<String, dynamic> local = {};
 
   Future<void> loadLanguage() async {
@@ -15,4 +15,8 @@ class ParentCubit extends Cubit<ParentState> {
     local = json.decode(s);
     emit(ParentInitial());
   }
+
 }
+
+
+
