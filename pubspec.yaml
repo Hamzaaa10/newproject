@@ -72,7 +72,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 flutter_native_splash:
-  image: "assets/news.jpg"
+  image: "assets/CL-Lhc30lu8CEAE=.webp"
   color: "#42a5f5"
   # To add assets to your application, add an assets section, like this:
   # assets:

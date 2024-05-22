@@ -1,4 +1,6 @@
+
 import 'package:auth/dashboard/dashboard_control/dashboard_cubit.dart';
+import 'package:auth/dashboard/favorite/view/page/favorite_page.dart';
 import 'package:auth/dashboard/pages/productpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,14 +39,8 @@ class DashboardPage extends StatelessWidget {
                   onPageChanged: dashboardCubit.onchange,
                   children: [
                     ProductPage(),
-                    Text(
-                      "fav",
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                    Text(
-                      "cart",
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
+                    FavoritePage(),
+                    
                   ],
                 ),
                 bottomNavigationBar: BottomNavigationBar(

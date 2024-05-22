@@ -36,6 +36,7 @@ class NewproductCubit extends Cubit<NewproductState> {
       nameController.text,
       descController.text,
       0,
+      qntController.text.isEmpty?0:
       int.parse(qntController.text),
       await image!.readAsBytes(),
     );

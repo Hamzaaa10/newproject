@@ -6,7 +6,7 @@ class DatabaseRepo {
   late Database myObjectDB;
   Future<void> initDB() async {
     myObjectDB = await openDatabase(
-      (await getDatabasesPath()) + '/productdbdb.db',
+      (await getDatabasesPath()) + '/product.db',
       version: 1,
       onCreate: (db, version) async {
         await db.execute('''

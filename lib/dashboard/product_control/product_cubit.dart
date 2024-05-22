@@ -37,7 +37,7 @@ class ProductCubit extends Cubit<ProductState> {
     fetchProducts ();
     emit(ProductStateLoaded());
   }
-  void addItemToCart(int id) {
+  void addItemToCart(int id, int quantity) {
     repo.updateCart(1, id);
     emit(ProductStateLoaded());
   }
