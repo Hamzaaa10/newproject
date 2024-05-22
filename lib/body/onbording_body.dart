@@ -46,7 +46,7 @@ class OnbordingBody extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          controler.data[index].txt2,
+                          controler.data[index].text2,
                           style:const TextStyle(
                             fontSize: 50,
                             fontWeight: FontWeight.bold,

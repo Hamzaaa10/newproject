@@ -28,11 +28,13 @@ class onbordingbuttonswidget extends StatelessWidget {
                     children: [
                       ElevatedButton(onPressed: () {
                         controler.skip(context);
-                      }, child: Text("skip")),
+                      }, child: Text("skip " , style: Theme.of(context).textTheme.displayLarge,
+)),
                       ElevatedButton(onPressed: () {
                       controler.next(context);
                     },
-                    child: Text("Continue"),)
+                    child: Text("Continue" ,  style: Theme.of(context).textTheme.displayLarge,
+),)
                     ],
                   ),
                 ));

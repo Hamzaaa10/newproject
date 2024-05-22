@@ -40,9 +40,7 @@ class customcard extends StatelessWidget {
                       children: [
                         Text(
                           productModel.name!,
-                          style: const TextStyle(
-                            color: Colors.grey,
-                          ),
+                         style: Theme.of(context).textTheme.displayLarge
                         ),
                         InkWell(
                             onTap: () {
@@ -76,10 +74,7 @@ class customcard extends StatelessWidget {
                           width: 160,
                           child: Text(
                             productModel.desc!,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 20),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.displayLarge
                           ),
                         ),
                         InkWell(

@@ -42,7 +42,8 @@ class BottomSheetContent extends StatelessWidget {
               controller.addItemToCart(productModel as int, quantity);
               Navigator.pop(context);
             },
-            child: Text('أضف إلى السلة'),
+            child: Text('أضف إلى السلة' ,style: Theme.of(context).textTheme.displayLarge,
+),
           ),
         ],
       ),
