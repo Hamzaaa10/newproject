@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:typed_data';
 
-import 'package:auth/dashboard/card/BottomSheetContent.dart';
+import 'package:auth/dashboard/favorite/controller/favorite_cubit.dart';
 import 'package:auth/dashboard/models/product_model.dart';
 import 'package:auth/dashboard/product_control/product_cubit.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,10 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 //    ده يا احمد شكل ال card اللي هيتعرض
 
-class customcard extends StatelessWidget {
-  customcard({required this.productModel, required this.controller});
+class FavoriteItemWidget extends StatelessWidget {
+  FavoriteItemWidget({required this.productModel, required this.controler});
   final ProductModel productModel;
-  final ProductCubit controller;
+  final FavoriteCubit controler;
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +47,10 @@ class customcard extends StatelessWidget {
                         InkWell(
                             onTap: () {
                               if (productModel.favorite == 1) {
-                                controller.addItemToFavorite(
+                                controler.addItemToFavorite(
                                     productModel.id ?? 0, 0);
                               } else {
-                                controller.addItemToFavorite(
+                                controler.addItemToFavorite(
                                     productModel.id ?? 0, 1);
                               }
                             },
@@ -83,16 +83,7 @@ class customcard extends StatelessWidget {
                           ),
                         ),
                         InkWell(
-                          onTap: () {
-                          showModalBottomSheet(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return BottomSheetContent(
-                                  productModel: productModel,
-                                  controller: controller);
-                            },
-                          );
-                        },
+                          onTap: () {},
                           child: productModel.favorite == 1
                               ? const Icon(
                                   CupertinoIcons.cart,

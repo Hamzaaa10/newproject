@@ -28,15 +28,15 @@ class OnbordingBody extends StatelessWidget {
                     height: double.infinity,
                   ),
                   Positioned(
-                    top:
-                        80, // Adjust to position text above bottomNavigationBar
+                    top: 80, // Adjust to position text above bottomNavigationBar
                     left: 20,
                     right: 20,
                     child: Column(
-                      children: [
+                     children: [
+                      
                         Text(
-                          controler.data[index].text,
-                          style: const TextStyle(
+                          controler.data[index].txt,
+                          style:const TextStyle(
                             fontSize: 35,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -46,11 +46,11 @@ class OnbordingBody extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          controler.data[index].club,
-                          style: const TextStyle(
+                          controler.data[index].txt2,
+                          style:const TextStyle(
                             fontSize: 50,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xffb4c0ce),
+                            color: Color.fromARGB(255, 236, 11, 11),
                             // backgroundColor: Colors.black54,
                           ),
                           textAlign: TextAlign.center,

@@ -1,21 +1,23 @@
+
+import 'package:auth/dashboard/favorite/controller/favorite_cubit.dart';
 import 'package:auth/dashboard/product_control/product_cubit.dart';
+import 'package:auth/dashboard/widgets/card_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:auth/dashboard/widgets/card_widget.dart';
-import 'package:auth/dashboard/models/product_model.dart';
+import '../component/favorite_item_widget.dart';
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({super.key});
+class FavoritePage extends StatelessWidget {
+  const FavoritePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: ProductCubit.instance,
-      child: BlocBuilder<ProductCubit, ProductState>(
+    return BlocProvider(
+      create: (context) => FavoriteCubit(),
+      child: BlocBuilder<FavoriteCubit, FavoriteState>(
         builder: (context, state) {
-          final ProductCubit controller = context.read<ProductCubit>();
+          final FavoriteCubit controller = context.read<FavoriteCubit>();
           return Scaffold(
             body: state is ProductStateLoading
                 ? const CircularProgressIndicator()
@@ -34,9 +36,9 @@ class ProductPage extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 20,
               ),
-              itemCount: controller.product.length,
+              itemCount: controller.products.length,
               itemBuilder: (_, int index) {
-                return customcard(productModel: controller.product[index], controller: controller,);
+                return FavoriteItemWidget(productModel: controller.products[index], controler: controller,);
               },
             )
           );
@@ -45,4 +47,3 @@ class ProductPage extends StatelessWidget {
     );
   }
 }
-
