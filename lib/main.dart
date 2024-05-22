@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
               Icons.shopping_cart_sharp,
               size: 200,
             ),
-            nextScreen: OnbordingPage(),
+            nextScreen: dashboard_page(),
             splashTransition: SplashTransition.fadeTransition,
             backgroundColor: Colors.blue));
 
