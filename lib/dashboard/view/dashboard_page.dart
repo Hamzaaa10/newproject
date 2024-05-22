@@ -7,7 +7,7 @@ import 'package:auth/core/my_theme.dart';
 
 class dashboard_page extends StatelessWidget {
   const dashboard_page({super.key});
-  final List title = const ["products", 'fav', 'cart'];
+  final List title = const ["products", 'favurite', 'cart'];
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -28,10 +28,9 @@ class dashboard_page extends StatelessWidget {
                 ProductPage(),
                 Text(
                   "Fav",
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
+                  style: Theme.of(context).textTheme.bodyLarge),
                 Text("Cart", style: Theme.of(context).textTheme.bodyLarge),
-                Text("Producy", style: Theme.of(context).textTheme.bodyLarge),
+                Text("Product", style: Theme.of(context).textTheme.bodyLarge),
               ],
             ),
             bottomNavigationBar: BottomNavigationBar(
@@ -45,7 +44,7 @@ class dashboard_page extends StatelessWidget {
                 BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.collections), label: 'products'),
                 BottomNavigationBarItem(
-                    icon: Icon(CupertinoIcons.heart), label: 'fav'),
+                    icon: Icon(CupertinoIcons.heart), label: 'fav' ),
                 BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.cart), label: 'card'),
               ],
