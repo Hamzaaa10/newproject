@@ -1,21 +1,3 @@
-
-
-
-// class ProductModel {
-//   String? id;
-//  String? title;
-//   String? desc;
-   
-  
-
-//   ProductModel({this.id, this.title, this.desc});
-
-//   ProductModel.fromJson(Map map) {
-//     id = map['id'].toString();
-//     title = map['title'];
-//     desc = map['desc'];
-//   }
-// }
 import 'dart:developer';
 import 'dart:typed_data';
 
@@ -36,4 +18,3 @@ class ProductModel {
     id = m['id'];
   }
 }
-
