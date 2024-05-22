@@ -32,14 +32,14 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: MyTheme.instance.light,
         darkTheme: MyTheme.instance.dark,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         home: AnimatedSplashScreen(
             duration: 3000,
             splash: Icon(
               Icons.shopping_cart_sharp,
               size: 200,
             ),
-            nextScreen: dashboard_page(),
+            nextScreen: OnbordingPage(),
             splashTransition: SplashTransition.fadeTransition,
             backgroundColor: Colors.blue));
 

@@ -1,16 +1,14 @@
 import 'package:auth/controler/onboardingcubit/onbordingcontrolstate.dart';
 import 'package:auth/models/bordingmodel.dart';
-
 import 'package:auth/pages/signin.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../models/bordingmodel.dart';
 
 class onbordingcontrol_cubit extends Cubit<onbordingstate> {
   onbordingcontrol_cubit() : super(onbordinginitialstate());
+
   PageController PageControler = PageController();
 
   void next(BuildContext context) async {
@@ -22,7 +20,7 @@ class onbordingcontrol_cubit extends Cubit<onbordingstate> {
       }));
     } else {
       PageControler.nextPage(
-          duration: Duration(seconds: 1), curve: Curves.bounceIn);
+          duration: Duration(milliseconds: 1), curve: Curves.bounceIn);
     }
   }
 
@@ -49,9 +47,10 @@ class onbordingcontrol_cubit extends Cubit<onbordingstate> {
         image:
             "https://www.searchenginejournal.com/wp-content/uploads/2022/08/google-shopping-ads-6304dccb7a49e-sej-1280x720.png"),
     onbordinmodel(
-        text: "Highest\n quality\n and\n cheapest\n price",
-        club: " ",
-        image:
-            "https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg")
+      text: "Highest quality\n and\n cheapest price",
+      club: " ",
+      image:
+          "https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg",
+    )
   ];
 }

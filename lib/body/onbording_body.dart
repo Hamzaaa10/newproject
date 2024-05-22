@@ -50,7 +50,7 @@ class OnbordingBody extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 50,
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 236, 11, 11),
+                            color: Color(0xffb4c0ce),
                             // backgroundColor: Colors.black54,
                           ),
                           textAlign: TextAlign.center,
